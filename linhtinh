@@ -1,0 +1,35 @@
+import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+
+from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from bs4 import BeautifulSoup
+
+# Cấu hình Selenium
+driver_path = r"C:\webdriver\chromedriver-win64\chromedriver.exe"
+driver = webdriver.Chrome(service=Service(driver_path))
+
+# Mở trang web
+url = "https://meoukitchen.sapofnb.vn/"
+driver.get(url)
+
+# Chờ trang tải xong
+import time
+time.sleep(5)
+
+# Lấy HTML và parse bằng BeautifulSoup
+html_content = driver.page_source
+soup = BeautifulSoup(html_content, 'html.parser')
+
+# Tìm tất cả các thẻ div cha có class="fl_g1"
+parent_div = soup.find("div", id="menu_e2c62a60-b8e7-4383-a080-cea8d3eb1fea")
+# print(parent_div)
+menu11 = []
+if parent_div:
+    name_tag = parent_div.find_all("div", class_="fs-16 ft-w text-breakword mr-b-4 cursor-p")
+    for child in name_tag:
+        menu11.append(f"{child.text}")
+print(menu11)
+# Đóng trình duyệt
+driver.quit()

@@ -1,0 +1,16 @@
+version: "3.1"
+
+stories:
+  - story: order unhappy
+    steps:
+      - intent: order
+      - action: utter_order
+      - intent: mood_unhappy
+      - action: utter_unhappy
+
+  - story: order happy
+    steps:
+      - intent: order
+      - action: utter_order
+      - intent: mood_great
+      - action: utter_happy

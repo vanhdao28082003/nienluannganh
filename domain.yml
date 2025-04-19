@@ -1,0 +1,55 @@
+version: '3.1'
+intents:
+- affirm
+- ask_coffee_menu
+- ask_weather
+- bot_challenge
+- cafe
+- deny
+- goodbye
+- greet
+- menu
+- mood_great
+- mood_unhappy
+- order
+responses:
+  utter_greet:
+  - text: Kính chào Quý khách!
+  - text: Xin chào! Mèo ú có thể giúp gì cho bạn?
+  - text: Chào bạn! Hôm nay bạn cần hỗ trợ gì không?
+  - text: Chào mừng bạn! Mèo Ú có thể làm gì để giúp bạn?
+  - text: Xin chào! Rất vui được hỗ trợ bạn.
+  - text: Chào bạn! Hy vọng bạn có một ngày tuyệt vời! 😊
+  utter_fallback:
+  - text: Bạn hãy đưa ra yêu cầu, mèo ú đang lắng nghe
+  utter_happy:
+  - text: Cảm ơn của quý khách, mèo ú sẽ phát huy
+  utter_unhappy:
+  - text: Xin lỗi quý khách, mèo ú hứa sẽ sửa đổi
+  utter_menu:
+  - text: Rất vui được phục vụ quý khách menu của mèo ú gồm:cafe,trà, trà sữa, đá say-sinh tố, soda,pizza, món ăn chơi, gỏi súp, cơm,mì-miến, bánh ngọt, kem
+  utter_goodbye:
+  - text: Tạm biệt quý khách, hẹn gặp lại
+  - text: Kính chào tạm biệt và mong sớm gặp lại quý khách!
+  - text: Kính chào tạm biệt và chúc quý khách một ngày tốt lành!
+  utter_cafe:
+  - text: 'Mời quý khách chọn loại cafe: cà phê đá truyền thống, cà phê nóng, cà phê sữa đá, cà phê sữa nóng, bạc xỉu đá, ca cao nóng, bạc xỉu nóng , ca cao đá,cà phê Espresso, Americano (đá), Cappuccino (Nóng), Greentea latte (nóng), trà sữa Choco Matcha, Cà phê bơ, pastachio latte'
+  utter_order:
+  - text: Cảm ơn quý khách, mời quý khách thưởng thức và cho đánh giá ?
+  utter_iamabot:
+  - text: Tôi là bot
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+actions:
+- utter_order
+- action_get_weather
+- action_get_coffee_menu
+entities:
+- city
+slots:
+  city:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: city

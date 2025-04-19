@@ -1,0 +1,47 @@
+version: "3.1"
+
+rules:
+  - rule: Nói tạm biệt khi người dùng chào tạm biệt
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Nói tôi là bot khi người dùng hỏi tôi là ai
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: đưa menu khi khách yêu cầu
+    steps:
+      - intent: menu
+      - action: utter_menu
+
+  - rule: chào khi khách hàng chào
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: ordered
+    steps:
+      - intent: order
+      - action: utter_order
+
+  - rule: caffe
+    steps:
+      - intent: cafe
+      - action: utter_cafe
+
+  - rule: Đưa menu cafe
+    steps:
+      - intent: ask_coffee_menu
+      - action: action_get_coffee_menu
+
+  - rule: hỏi thời tiết
+    steps:
+      - intent: ask_weather
+      - action: action_get_weather
+
+  - rule: fallback khi không hiểu
+    steps:
+    - intent: nlu_fallback
+    - action: utter_fallback

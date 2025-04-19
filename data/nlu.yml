@@ -1,0 +1,117 @@
+version: "3.1"
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - Xin chào
+      - Chào buổi sáng
+      - Chào buổi chiều
+      - Chào
+      - hey there
+      - 2
+      - Chao
+      - Xin chao
+  - intent: goodbye
+    examples: |
+      - bye
+      - tạm biệt
+      - cee you later
+      - chào tạm biệt
+      - hẹn gặp lại
+      - goodbye
+      - bái bai
+      - bai
+      - bye bye
+      - see you later
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - vâng
+      - tất nhiên rồi
+      - nghe thật tuyệt
+      - đúng vậyvậy
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - không
+      - tôi không nghĩ vậy
+      - không thể nào
+      - tôi không thích nó
+      - không bao giờ
+  - intent: mood_great
+    examples: |
+      - tuyệt vời
+      - tuyệt
+      - rất thú vị
+      - nghe thật hay ho
+      - thú vị
+      - tôi thấy nó rất tốt
+      - rất tốt
+      - tôi thấy nó rất hay
+      - tuyệt tuyệt tuyệt vời
+      - đỉnh nóc, kịch trần, bay phất phới
+      - ờ mây dinh, gút chóp
+      - nai sừ
+      - ô dít i mai boy
+      - so phớ phẹt phẹt
+      - ngon
+      - 10 điểm
+  - intent: mood_unhappy
+    examples: |
+      - kinh khủng
+      - tồi tệ
+      - Nó không tốt lắm
+      - Nó làm tôi cảm thấy thất vọng
+      - Như J97 vậy
+      - Buồn :((
+      - :((
+      - rất buồn
+      - rất rất rất buồn
+      - Không tốt một chút nào cả
+      - Haizzz
+      - saaaaad
+      - sadsad
+      - so sad
+  - intent: menu
+    examples: |
+      - menu
+      - tôi cần thứ gì đó để giải khát
+      - ở đây có bán gì
+      - có thể đưa tôi menu
+      - có gì uống hông ?
+      - Ở đây có gì ngon nhất
+      - Best seller của quán là gì
+  - intent: cafe
+    examples: |
+      - cho tôi cafe
+      - cafe
+      - Ở đây có cafe không
+      - có cafe không
+  - intent: order
+    examples: |
+      - cho tôi cafe truyền thống
+      - cafe đá
+      - cho tôi cafe đá
+      - Cho tôi cafe đá
+  - intent: bot_challenge
+    examples: |
+      - bạn là bot à?
+      - bạn là người ak ?
+      - tôi đang nói chuyện với máy à ?
+      - tôi đang nói chuyện với người ak ?
+  - intent: ask_weather
+    examples: |
+      - Thời tiết hôm nay ở [Hà Nội](city) thế nào?
+      - Hôm nay trời có mưa ở [Đà Nẵng](city) không?
+      - Nhiệt độ tại [TP Hồ Chí Minh](city) là bao nhiêu?
+      - Thời tiết hôm nay [Đà Nẵng](city) thế nào?
+  - intent: ask_coffee_menu
+    examples: |
+      - Các món cà phê bao gồm những gì?
+      - Có những loại cà phê nào?
+      - Cho mình xem menu cà phê
+      - Menu cà phê có gì?

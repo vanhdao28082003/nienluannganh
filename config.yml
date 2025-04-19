@@ -1,0 +1,23 @@
+recipe: default.v1
+assistant_id: 20250210-223125-reduced-encumbrance
+language: en
+
+pipeline:
+  - name: WhitespaceTokenizer
+  - name: CountVectorsFeaturizer
+  - name: DIETClassifier
+    epochs: 50
+    constrain_similarities: true
+  - name: ResponseSelector
+    epochs: 50
+    constrain_similarities: true
+  - name: FallbackClassifier
+    threshold: 0.3
+    ambiguity_threshold: 0.1
+
+policies:
+  - name: MemoizationPolicy
+  - name: RulePolicy
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 50

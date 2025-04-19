@@ -1,0 +1,13 @@
+{
+  "0": "affirm",
+  "1": "ask_weather",
+  "2": "bot_challenge",
+  "3": "cafe",
+  "4": "deny",
+  "5": "goodbye",
+  "6": "greet",
+  "7": "menu",
+  "8": "mood_great",
+  "9": "mood_unhappy",
+  "10": "order"
+}
