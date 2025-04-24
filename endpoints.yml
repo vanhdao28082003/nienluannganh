@@ -44,7 +44,7 @@ action_endpoint:
   url: http://localhost:5055/webhook
 
 webhook_facebook:
-  url: "https://0e58-2405-4802-a695-25f0-35f9-aa10-f3d9-ee99.ngrok-free.app/webhooks/facebook/webhook"
+  url: "https://30fa-2001-ee0-190-ee6a-1506-e5-41f9-dd2d.ngrok-free.app/webhooks/facebook/webhook"
 
 facebook:
   user_message_evt: user_uttered
